@@ -6,9 +6,9 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import VueRouter from 'unplugin-vue-router/vite'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
+import { VueRouterAutoImports } from 'vue-router/unplugin'
+import VueRouter from 'vue-router/vite'
 
 export default defineConfig({
   resolve: {
@@ -17,8 +17,10 @@ export default defineConfig({
     },
   },
   plugins: [
-    // https://github.com/posva/unplugin-vue-router
-    VueRouter(),
+    // https://github.com/vuejs/router/pull/2603
+    VueRouter({
+      dts: 'src/typed-router.d.ts',
+    }),
 
     VueMacros({
       defineOptions: false,
