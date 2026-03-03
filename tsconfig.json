@@ -29,10 +29,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "./typed-router.d.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
-    "src/**/*.tsx",
     "src/**/*.vue"
   ],
   "exclude": [
