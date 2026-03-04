@@ -31,7 +31,10 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "shims.d.ts"
   ],
   "exclude": [
     "dist",
